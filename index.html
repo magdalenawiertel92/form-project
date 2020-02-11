@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weekly web dev challenge 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logoHeader">
+                <img src="img/logo.png" alt="logo">
+            </div>
+        </header>
+        <div class="wrapperForm">
+            <div class="column">
+                <h1>Register Form</h1>
+                <div class="border">
+                    <div class="register">
+                        <form id="registration">
+                            <label for="registerUsername" class="text">
+                                <span>
+                                    <img src="img/glyphicons_003_user.png" alt="user">
+                                </span>
+                                <input id="registerUsername" type="text" placeholder="Username">
+                            </label>
+                            <label for="registerPassword" class="text">
+                                <span>
+                                    <img src="img/glyphicons_203_lock.png" alt="password">
+                                </span>
+                                <input id="registerPassword" type="password" placeholder="Password">
+                            </label>
+                            <label for="registerConfirmPassword" class="text">
+                                <span>
+                                    <img src="img/glyphicons_203_lock.png" alt="confirm password">
+                                </span>
+                                <input id="registerConfirmPassword" type="password" placeholder="Confirm Password">
+                            </label>
+                            <label for="registerEmail" class="text">
+                                <span>
+                                    <img src="img/glyphicons_010_envelope.png" alt="email">
+                                </span>
+                                <input id="registerEmail" type="text" placeholder="Email">
+                           
+                           
+                           
+                           
+                            </label>
+                            <div class="text">
+                                <span>
+                                    <img src="img/glyphicons_242_google_maps.png" alt="user">
+                                </span>
+                                <label class="select" for="registerYourLocation">
+                                    <select name="Your Location">
+                                        <option value="none" selected disabled hidden invalid>Your Location</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="America">America</option>
+                                        <option value="Africa">Africa</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <input id="registerCheckbox" type="checkbox">
+                            <label for="registerCheckbox" class="checkbox">
+                                <span class="square"></span>
+                                <span>I have read and accept the terms of the use.</span>
+                            </label>
+                            <div class="bigbutton">
+                                <button>Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <h1>Send Email</h1>
+                <div class="border">
+                    <div class="email">
+                        <form id="email">
+                            <label for="sendEmailYourName" class="text">
+                                <span>
+                                    <img src="img/glyphicons_003_user.png" alt="user">
+                                </span>
+                                <input id="sendEmailYourName" type="text" placeholder="Your Name">
+                            </label>
+                            <label for="SendEmailYourEmail" class="text">
+                                <span>
+                                    <img src="img/glyphicons_010_envelope.png" alt="user">
+                                </span>
+                                <input id="SendEmailYourEmail" type="text" placeholder="Your Email">
+                            </label>
+                            <div class="message">
+                                <textarea cols="30" rows="10" placeholder="Type your message..."></textarea>
+                            </div>
+                            <input id="sendEmailCheckbox" type="checkbox">
+                            <label for="sendEmailCheckbox" class="checkbox">
+                                <span class="square"></span>
+                                <span>Send a copy to my Email</span>
+                            </label>
+                            <div class="bigbutton">
+                                <button>Send Email</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <h1>Sign In Form</h1>
+                <div class="border">
+                    <div class="signIn">
+                        <form id="signIn">
+                            <label for="signInUsername" class="text">
+                                <span>
+                                    <img src="img/glyphicons_003_user.png" alt="user">
+                                </span>
+                                <input id="signInUsername" type="text" placeholder="Username">
+                            </label>
+                            <label for="signInPassword" class="text">
+                                <span>
+                                    <img src="img/glyphicons_203_lock.png" alt="password">
+                                </span>
+                                <input id="signInPassword" type="password" placeholder="Password">
+                            </label>
+                            <div class="line">
+                                <input id="signInCheckbox" type="checkbox">
+                                <label for="signInCheckbox" class="checkbox">
+                                    <span class="square"></span>
+                                    <span>Remember me</span>
+                                </label>
+                                <div class="smallbutton">
+                                    <button>Sign in</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <h1>Recover Form</h1>
+                <div class="border">
+                    <div class="recoverForm">
+                        <form id="recoverForm">
+                            <label for="recoverFormEmail" class="text">
+                                <span>
+                                    <img src="img/glyphicons_010_envelope.png" alt="email">
+                                </span>
+                                <input id="recoverFormEmail" type="text" placeholder="Enter your Email">
+                            </label>
+                            <label for="recoverFormPhone" class="text">
+                                <span>
+                                    <img src="img/glyphicons_139_phone.png" alt="phone">
+                                </span>
+                                <input id="recoverFormPhone" type="text" placeholder="Enter your Phone number">
+                            </label>
+                            <div class="line">
+                                <div class="smallbutton">
+                                    <button>Send</button>
+                                </div>
+                                <div class="smallbutton">
+                                    <button>Done</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <h1>Subscribe Form</h1>
+                <div class="border">
+                    <div class="subscribe">
+                        <form id="subscribe">
+                            <label for="subscribeEmail" class="text">
+                                <span>
+                                    <img src="img/glyphicons_010_envelope.png" alt="phone">
+                                </span>
+                                <input id="subscribeEmail" type="text" placeholder="Enter your Email">
+                            </label>
+                            <div class="line">
+                                <div class="smallbutton">
+                                    <button>Subscribe</button>
+                                </div>
+                                <div class="smallbutton">
+                                    <button>No, thanks</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                    <img src="img/text.png" alt="text">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

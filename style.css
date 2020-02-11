@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Titillium5;
+    src: url(fonts/TitilliumText22L005.otf);
+}
+
+@font-face {
+    font-family: Titillium4;
+    src: url(fonts/TitilliumText22L003.otf);
+}
+
+
+body {
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Titillium5;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 167px;
+}
+
+header .logoHeader {
+    padding: 55px 0 0 350px;
+}
+
+.logoHeader img,
+.logo img {
+    filter: invert(1);
+    opacity: 0.4;
+}
+
+header .logoHeader img {
+    height: 111px;
+}
+
+/* FORM CONTAINER BASE */
+
+.wrapper {
+    height: 1372px;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.wrapper .wrapperForm .column h1 {
+    padding: 35px 0 15px 0;
+    text-align: center;
+}
+
+.wrapperForm {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.wrapper .column:nth-child(1) {
+    margin: 0 40px 0 65px;
+}
+
+.wrapper .column:nth-child(2) {
+    margin: 0 65px 0 40px;
+}
+
+.wrapper .column .register,
+.wrapper .column .email,
+.wrapper .column .signIn,
+.wrapper .column .recoverForm,
+.wrapper .column .subscribe {
+    flex-grow: 1;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.wrapper .column .border {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.wrapper .column .logo {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 80px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* FORM CONTAINER INSIDE */
+
+h1 {
+    font-size: 32px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.wrapper .text,
+.wrapper .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.wrapper .line .checkbox {
+    margin-bottom: 0;
+}
+
+.wrapper .checkbox {
+    border-style: none;
+    padding-left: 0;
+}
+
+.wrapper .text input,
+.wrapper .text select {
+    background-color: transparent;
+    border-style: none;
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    color: #6d6d6d;
+    outline: none;
+    -webkit-appearance: none;
+    z-index: 1;
+    font-family: Titillium4;
+}
+
+.wrapper .text .select {
+    height: 100%;
+}
+
+.wrapper .text select option {
+    background-color: #f4f4f4;
+    height: 40px;
+}
+
+.wrapper .register label:focus-within,
+.wrapper .text:focus-within {
+    border: 1px solid #6782d3;
+}
+
+.wrapper .register .select:focus-within {
+    border: none;
+}
+
+.wrapper .text span {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 46px;
+    border-right: 1px solid #c6c6c6;
+    z-index: 0;
+    padding-right: 10px;
+}
+
+.wrapper .text span img {
+    margin: 0 auto;
+}
+
+.wrapper .register label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.select::after {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 10px;
+    background-image: url(img/arrow.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    top: auto;
+    left: auto;
+    margin-left: 250px;
+    z-index: 0;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.checkbox .square {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #cfcfcf;
+}
+
+input[type=checkbox]:checked+.checkbox .square::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #90cc1b;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+}
+
+.checkbox span {
+    padding-left: 12px;
+    font-size: 16px;
+    color: rgb(175, 175, 175);
+    font-family: Titillium4;
+}
+
+.wrapper .bigbutton,
+.wrapper .smallbutton {
+    padding-left: 0;
+    height: 45px;
+    border-style: none;
+}
+
+.bigbutton button,
+.smallbutton button {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-family: Titillium4;
+    color: #fff;
+    text-shadow: 0.559px 0.829px 0px rgba(81, 133, 14, 0.004);
+    border: 1px solid rgb(59, 154, 0);
+    border-radius: 3px;
+    background-image: -moz-linear-gradient(#addc54 0%, #7ec31f 100%);
+    background-image: -webkit-linear-gradient(#addc54 0%, #7ec31f 100%);
+    background-image: -ms-linear-gradient(#addc54 0%, #7ec31f 100%);
+}
+
+.subscribe .smallbutton:nth-child(2) button {
+    background-image: -moz-linear-gradient(#f76f7f 0%, #f03747 100%);
+    background-image: -webkit-linear-gradient(#f76f7f 0%, #f03747 100%);
+    background-image: -ms-linear-gradient(#f76f7f 0%, #f03747 100%);
+    border-color: rgb(162, 32, 42);
+}
+
+.recoverForm .smallbutton:nth-child(2) button {
+    background-image: -moz-linear-gradient(#cde4b0 0%, #abd182 100%);
+    background-image: -webkit-linear-gradient(#cde4b0 0%, #abd182 100%);
+    background-image: -ms-linear-gradient(#cde4b0 0%, #abd182 100%);
+    border-color: #90ca6d;
+}
+
+.smallbutton button {
+    font-size: 18px;
+    font-family: Titillium4;
+}
+
+.email textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-family: Titillium4;
+    border-radius: 3px;
+    border-color: #c6c6c6;
+    letter-spacing: 1px;
+    resize: none;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+}
+
+.signIn .smallbutton,
+.recoverForm .smallbutton,
+.subscribe .smallbutton {
+    width: 100%;
+}
+
+.recoverForm .smallbutton:nth-child(2),
+.subscribe .smallbutton:nth-child(2),
+.signIn .smallbutton {
+    margin-left: 40px;
+}
+
+.logo img:nth-child(1) {
+    height: 85px;
+}
+
+.logo img:nth-child(2) {
+    height: 17px;
+    margin: 20px 0 0 40px;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    header .logoHeader {
+        padding: 55px 0 0 200px;
+    }
+
+    header .logoHeader img {
+        height: 100px;
+    }
+
+    .wrapper .column:nth-child(1) {
+        margin: 0 20px 0 40px;
+    }
+
+    .wrapper .column:nth-child(2) {
+        margin: 0 40px 0 20px;
+    }
+
+    .select::after {
+        margin-left: 150px;
+    }
+
+    .logo img:nth-child(1) {
+        width: 324px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapperForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .logoHeader img {
+        height: 110px;
+    }
+    header .logoHeader {
+        padding: 40px 0 0 0;
+        margin: 0 auto;
+    }
+    .wrapper .column {
+        display: flex;
+        flex-direction: column;
+    }
+    .wrapper .wrapperForm .column {
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    .wrapper .wrapperForm .column h1 {
+        padding: 20px 0 15px 0;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .wrapper {
+        height: 100%;
+    }
+
+    .wrapper .text span {
+        height: 26px;
+        width: 42px;
+    }
+
+    .wrapper .text,
+    .wrapper .checkbox {
+        padding-left: 15px;
+        margin-bottom: 15px;
+    }
+
+    .wrapper .checkbox {
+        padding-left: 0;
+    }
+
+    .wrapper .text input,
+    .wrapper .text select {
+        padding-left: 15px;
+    }
+
+    .checkbox span {
+        font-size: 14px;
+    }
+
+    .bigbutton button,
+    .smallbutton button {
+        font-size: 18px;
+    }
+    .bigbutton button {
+        font-size: 20px;
+    }
+
+    .recoverForm .smallbutton:nth-child(2),
+    .subscribe .smallbutton:nth-child(2),
+    .signIn .smallbutton {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 540px) {
+    header .logoHeader img {
+        height: 80px;
+    }
+    header {
+        height: 120px;
+    }
+    .recoverForm .smallbutton:nth-child(2), .subscribe .smallbutton:nth-child(2), .signIn .smallbutton {
+        margin-left: 20px;
+    }
+    .wrapper .bigbutton, .wrapper .smallbutton {
+        height: 40px;
+    }
+}
+@media (max-width: 500px) {
+    .wrapper .wrapperForm .column {
+        width: 75%;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    .wrapper .text, .wrapper .checkbox {
+        padding-left: 10px;
+        margin-bottom: 12px;
+    }
+    .wrapper .checkbox {
+        padding-left: 0;
+    }
+    .wrapper .text span img {
+        transform: scale(.8);
+    }
+    .wrapper .text input, .wrapper .text select {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .select::after {
+        margin-left: 130px;
+    }
+    .select::after {
+        width: 14px;
+        height: 8px;
+    }
+
+    input[type=checkbox]:checked+.checkbox .square::after {
+        width: 13px;
+        height: 13px;
+    }
+    .wrapper .column .logo {
+        margin: 25px 0 30px 0;
+    }
+    .logo img:nth-child(1) {
+        width: 280px;
+        height: auto;
+    }
+    .logo img:nth-child(2) {
+        height: 14px;
+        margin: 15px 0 0 40px;
+    }
+}
+@media (max-width: 360px) {
+    .wrapper .wrapperForm .column {
+        width: 80%;
+    }
+    header .logoHeader img {
+        height: 70px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    .checkbox span {
+        font-size: 13px;
+    }
+    .select::after {
+        margin-left: 140px;
+    }
+    .line {
+        display: flex;
+        flex-direction: column;
+    }
+    .recoverForm .smallbutton:nth-child(2), .subscribe .smallbutton:nth-child(2), .signIn .smallbutton {
+        margin-left: 0;
+    }
+    .wrapper .line .checkbox {
+        margin-bottom: 12px;
+    }
+    .recoverForm .smallbutton:nth-child(2) button,
+    .subscribe .smallbutton:nth-child(2) button {
+        margin-top: 12px;
+    }
+    .wrapper .bigbutton, .wrapper .smallbutton {
+        height: 30px;
+    }
+    .bigbutton button,
+    .smallbutton button {
+        font-size: 16px;
+    }
+    .wrapper .text input, .wrapper .text select {
+        padding-left: 6px;
+        font-size: 12px;
+    }
+    .wrapper .text span {
+        padding-right: 6px;
+    }
+    .wrapper .text, .wrapper .checkbox {
+        padding-left: 6px;
+        height: 30px;
+    }
+    .email textarea {
+font-size: 12px;
+    }
+}
+@media (max-width: 320px) {
+    .select::after {
+        margin-left: 110px;
+    }
+    .wrapper .text input, .wrapper .text select {
+        font-size: 11px;
+    }
+    .email textarea {
+        font-size: 11px;
+    }
+}
+
